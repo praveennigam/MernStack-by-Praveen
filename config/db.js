@@ -1,11 +1,12 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 export const connectDB = async() => {
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useCreateIndex: true,
+            useFindAndModify: false,
+            useCreateIndex: true // This line causes the error, so remove it
         });
         console.log("Database connected successfully");
     } catch (error) {
