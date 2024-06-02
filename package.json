@@ -4,8 +4,7 @@
     "main": "server.js",
     "type": "module",
     "scripts": {
-        "dev": "server.js",
-        "start": "server.js"
+        "start": "node server.js"
     },
     "author": "",
     "license": "ISC",
